@@ -1,7 +1,7 @@
 server_connect_timeout: 5000
 remote_ping_cache: -1
 forge_support: false
-player_limit: -1
+player_limit: 300
 permissions:
   default:
   - bungeecord.command.server
@@ -14,30 +14,33 @@ permissions:
 timeout: 30000
 log_commands: false
 network_compression_threshold: 256
-online_mode: true
+online_mode: false
 disabled_commands:
 - disabledcommandhere
 servers:
   lobby:
-    motd: '&1Just another BungeeCord - Forced Host'
-    address: localhost:25565
-    restricted: false
+    motd: ' &f፠ &9Lysium &f፠\n &eТру выживание только у нас, заходи!'
+    address: localhost:25566
+    restricted: true
+  survival:
+    motd: ' Survival'
+    address: localhost:25567
+    restructed: false
 listeners:
-- query_port: 25577
-  motd: '&1Another Bungee server'
+- query_port: 25565
+  motd: ' &f፠ &9Lysium &f፠\n &eТру выживание только у нас, заходи!'
   tab_list: GLOBAL_PING
   query_enabled: false
   proxy_protocol: false
   forced_hosts:
-    pvp.md-5.net: pvp
   ping_passthrough: false
   priorities:
   - lobby
   bind_local_address: true
-  host: 0.0.0.0:25577
-  max_players: 1
+  host: 0.0.0.0:25565
+  max_players: 300
   tab_size: 60
-  force_default_server: false
+  force_default_server: true
 ip_forward: false
 remote_ping_timeout: 5000
 prevent_proxy_connections: false
